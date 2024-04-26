@@ -5,9 +5,9 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>{{ $name }}</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <title>{{ $title }}</title>
+    <meta content="padang eye center" name="description" />
+    <meta content="padang eye center, mata" name="keywords" />
 
     <!-- Favicons -->
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon" />
@@ -29,70 +29,27 @@
     <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
 </head>
 
 <body>
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
-            <h1 class="logo"><a href="index.html">{{ $name }}</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
+            <h1 class="logo"><a href="index.html">{{ $hospitalData->name }}</a></h1>
+
             <!-- <a href="index.html" class="logo"
           ><img src="logo_default.png" alt="" class="img-fluid"
         /></a> -->
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li>
-                        <a class="nav-link scrollto active" href="#hero">Beranda</a>
-                    </li>
-                    <li><a class="nav-link scrollto" href="#about">Tentang PEC</a></li>
-                    <li>
-                        <a class="nav-link scrollto" href="#services">Layanan Kami</a>
-                    </li>
-                    <li>
-                        <a class="nav-link scrollto o" href="#branch">Cabang Pec</a>
-                    </li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    {{-- <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> --}}
-                    {{-- <li class="dropdown">
-                        <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown">
-                                <a href="#"><span>Deep Drop Down</span>
-                                    <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li> --}}
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li>
-                        <a class="getstarted scrollto" href="#about">Hubungi Kami</a>
-                    </li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
-            <!-- .navbar -->
+            @include('template.navbar')
         </div>
     </header>
-    <!-- End Header -->
 
     <section id="hero" class="d-flex align-items-center">
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-9 text-center">
-                    <h1>Padang Eye Center</h1>
-                    <h2>Melayani Sepenuh Hati</h2>
+                    <h1>{{ $hospitalData->name }}</h1>
+                    <h2>{{ $hospitalData->moto }}</h2>
                 </div>
             </div>
             <div class="text-center">
@@ -158,6 +115,9 @@
                 <div class="section-title">
                     <h2>Tentang Pec</h2>
                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quam delectus sit eum natus
+                        voluptate minima repellendus, doloremque quod impedit corrupti molestias voluptatum quis quidem
+                        ab incidunt? Recusandae, nostrum qui.
                         Magnam dolores commodi suscipit. Necessitatibus eius consequatur
                         ex aliquid fuga eum quidem.
                     </p>
@@ -166,8 +126,20 @@
                 <div class="row content">
                     <div class="col-lg-6">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Visi
+                        </p>
+                        <ul>
+                            @foreach ($hospitalData->visions as $visi)
+                                <li>
+                                    <i class="ri-check-double-line"></i> {{ $visi->description }}
+                                </li>
+                            @endforeach
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <p>
+                            Misi
                         </p>
                         <ul>
                             <li>
@@ -183,15 +155,6 @@
                                 aliquip ex ea commodo consequat
                             </li>
                         </ul>
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0">
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                            aute irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.
-                        </p>
                         <a href="#" class="btn-learn-more">Learn More</a>
                     </div>
                 </div>
@@ -205,9 +168,9 @@
                 <div class="row justify-content-end">
                     <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
-                            <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2"
+                            <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="2"
                                 class="purecounter"></span>
-                            <p>Happy Clients</p>
+                            <p>Patients / day</p>
                         </div>
                     </div>
 
@@ -221,8 +184,8 @@
 
                     <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
-                            <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="2"
-                                class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="{{ now()->year - 2008 }}"
+                                data-purecounter-duration="2" class="purecounter"></span>
                             <p>Tahun pengalaman</p>
                         </div>
                     </div>
@@ -252,8 +215,7 @@
 
                     <div class="col-lg-6 pt-3 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
                         <h3>
-                            Voluptatem dignissimos provident quasi corporis voluptates sit
-                            assumenda.
+                            Video profile Padang Eye Center
                         </h3>
                         <p class="fst-italic">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
