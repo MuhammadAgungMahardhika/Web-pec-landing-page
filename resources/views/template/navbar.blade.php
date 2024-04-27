@@ -4,12 +4,10 @@
             <a class="nav-link scrollto active" href="#hero">Beranda</a>
         </li>
         <li><a class="nav-link scrollto" href="#about">Tentang PEC</a></li>
-        <li>
-            <a class="nav-link scrollto" href="#services">Layanan Kami</a>
-        </li>
-        <li>
-            <a class="nav-link scrollto o" href="#branch">Cabang Pec</a>
-        </li>
+        <li> <a class="nav-link scrollto" href="#services">Layanan Kami</a> </li>
+        <li> <a class="nav-link scrollto" href="#posts">Postingan</a></li>
+        <li> <a class="nav-link scrollto" href="#testimonials">Testimoni</a> </li>
+        <li> <a class="nav-link scrollto o" href="#branch">Cabang Pec</a> </li>
         <li><a class="nav-link scrollto" href="#team">Team Pec</a></li>
         {{-- <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> --}}
         {{-- <li class="dropdown">

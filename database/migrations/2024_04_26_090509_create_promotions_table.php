@@ -11,20 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('news', function (Blueprint $table) {
+        Schema::create('promotions', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_hospital', false, true);
-            $table->bigInteger('id_category', false, true);
             $table->string('title');
-            $table->enum('type', ['article', 'post']);
-            $table->string('slug')->unique();
-            $table->string('brosur_url')->nullable();
-            $table->string('author');
-            $table->date('publication_date');
-            $table->string('summary');
-            $table->string('source')->nullable();
-            $table->string('link')->nullable();
-            $table->string('tags')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('brosur_url');
+            $table->date('from');
+            $table->date('to');
+            $table->text('description')->nullable();
+            $table->string('link');
+            $table->integer('price');
+            $table->string('term_and_conditions')->nullable();
             $table->string('created_by')->nullable();
             $table->string('updated_by')->nullable();
             $table->timestamps();
@@ -36,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('news');
+        Schema::dropIfExists('promotions');
     }
 };

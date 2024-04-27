@@ -23,7 +23,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             HospitalSeeder::class,
-            VisionSeeder::class
+            VisionSeeder::class,
+            MissionSeeder::class,
+            CategorySeeder::class,
+            NewsSeeder::class
         ]);
     }
 }
