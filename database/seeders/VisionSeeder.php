@@ -15,7 +15,7 @@ class VisionSeeder extends Seeder
     {
         DB::table('visions')->insert([
             'id_hospital' => 1,
-            'description' => 'Menjadikan Semua Mata Masyarakat Sehat'
+            'description' => 'Menjadikan Rumah Sakit yang terpercaya dan terkemuka di bidang pelayanan kesehatan mata masyarakat dengan implementasi nilai–nilai kepuasan pasien costumer satisfaction'
         ]);
     }
 }

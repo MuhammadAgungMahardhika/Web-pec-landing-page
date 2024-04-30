@@ -34,7 +34,19 @@
         }
 
         .text-pec-success {
-            color: #46dfac
+            color: #46dfac;
+        }
+
+        .text-pec-warning {
+            color: #eca46b;
+        }
+
+        .shadow-pec-warning {
+            box-shadow: 0px 0px 3px rgba(236, 164, 107, 0.5);
+        }
+
+        .shadow-pec-warning:hover {
+            box-shadow: 0px 0px 10px rgba(236, 164, 107, 0.5);
         }
 
         .shadow-pec-success {
