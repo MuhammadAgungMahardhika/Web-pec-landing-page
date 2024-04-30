@@ -70,6 +70,7 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Tentang Pec</h2>
+                    <img src="{{ asset('assets/logo/logo_pec.png') }}" alt="" width="200">
                     <p>
                         {{ $hospitalData->about }}
                     </p>
