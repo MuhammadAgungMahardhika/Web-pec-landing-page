@@ -10,7 +10,7 @@
     <meta content="padang eye center, mata" name="keywords" />
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon" />
+    <link href="{{ asset('assets/logo/logo_pec.png') }}" rel="icon" />
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon" />
     {{-- Font Awesome --}}
     <script src="https://kit.fontawesome.com/9d17737383.js" crossorigin="anonymous"></script>
@@ -18,7 +18,33 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Oswald&display=swap" rel="stylesheet">
 
+    <style>
+        .gilda-display-regular {
+            font-family: "Gilda Display", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .text-pec-primary {
+            color: #124265
+        }
+
+        .text-pec-success {
+            color: #46dfac
+        }
+
+        .shadow-pec-success {
+            box-shadow: 0px 0px 3px rgba(70, 223, 172, 0.5);
+        }
+
+        .shadow-pec-success:hover {
+            box-shadow: 0px 0px 10px rgba(70, 223, 172, 0.5);
+        }
+    </style>
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -35,11 +61,12 @@
 <body>
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
-            <h1 class="logo"><a href="index.html">{{ $hospitalData->name }}</a></h1>
+            <a href="" class="logo "><img src="{{ asset('assets/logo/logo_pec.png') }}" alt=""
+                    class="img-fluid" /></a>
+            <h1 class="logo "><a href=""
+                    class="gilda-display-regular text-success">{{ $hospitalData->name }}</a></h1>
 
-            <!-- <a href="index.html" class="logo"
-          ><img src="logo_default.png" alt="" class="img-fluid"
-        /></a> -->
+
             @include('template.navbar')
         </div>
     </header>

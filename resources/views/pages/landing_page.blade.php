@@ -4,18 +4,18 @@
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-9 text-center">
-                    <h1>{{ $hospitalData->name }}</h1>
-                    <h2>{{ $hospitalData->moto }}</h2>
+                    <h1 class="text-success">{{ $hospitalData->name }}</h1>
+                    <h2 class="text-pec-primary">{{ $hospitalData->moto }}</h2>
                 </div>
             </div>
             <div class="text-center">
-                <a href="#about" class="btn-get-started scrollto">Booking now</a>
+                <a href="#about" class="btn-get-started scrollto bg-success">Booking now</a>
             </div>
 
             <div class="row icon-boxes">
                 <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
                     data-aos-delay="200">
-                    <div class="icon-box">
+                    <div class="icon-box ">
                         <div class="icon"><i class="ri-stack-line"></i></div>
                         <h4 class="title"><a href="">Pendaftaran Online</a></h4>
                         <p class="description">
@@ -385,7 +385,7 @@
                             <div class="swiper-slide p-4">
                                 <a href="{{ url('postingan') . '/' . $post->slug }}"
                                     style="text-decoration: none; color: inherit;">
-                                    <div class="card col-12 shadow">
+                                    <div class="card col-12 shadow-pec-success">
                                         <img src="{{ asset('assets/img/testimonials/testimonials-2.jpg') }}"
                                             class="card-img-top" alt="...">
                                         <div class="card-body">
