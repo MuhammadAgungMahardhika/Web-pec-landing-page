@@ -13,53 +13,25 @@
             </div>
 
             <div class="row icon-boxes">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
-                    data-aos-delay="200">
-                    <div class="icon-box ">
-                        <div class="icon"><i class="ri-stack-line"></i></div>
-                        <h4 class="title"><a href="">Pendaftaran Online</a></h4>
-                        <p class="description">
-                            Voluptatum deleniti atque corrupti quos dolores et quas
-                            molestias excepturi
-                        </p>
+                @php
+                    $delay = 200;
+                @endphp
+                @foreach ($landingPageMenu as $menu)
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
+                        data-aos-delay="{{ $delay }}">
+                        <div class="icon-box ">
+                            <div class="icon"><i class="{{ $menu['icon'] }}"></i></div>
+                            <h4 class="title"><a href="">{{ $menu['title'] }}</a></h4>
+                            <p class="description">
+                                {{ $menu['description'] }}
+                            </p>
+                        </div>
                     </div>
-                </div>
+                    @php
+                        $delay += 150;
+                    @endphp
+                @endforeach
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
-                    data-aos-delay="300">
-                    <div class="icon-box">
-                        <div class="icon"><i class="ri-palette-line"></i></div>
-                        <h4 class="title"><a href="">Jadwal Dokter</a></h4>
-                        <p class="description">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
-                    data-aos-delay="400">
-                    <div class="icon-box">
-                        <div class="icon"><i class="ri-command-line"></i></div>
-                        <h4 class="title"><a href="">Whats up</a></h4>
-                        <p class="description">
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                            qui officia
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
-                    data-aos-delay="500">
-                    <div class="icon-box">
-                        <div class="icon"><i class="ri-fingerprint-line"></i></div>
-                        <h4 class="title"><a href="">Komplain Layanan</a></h4>
-                        <p class="description">
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -149,17 +121,16 @@
                     <div class="col-lg-6 video-box align-self-baseline position-relative" data-aos="fade-right"
                         data-aos-delay="100">
                         <img src="assets/img/about-video.jpg" class="img-fluid" alt="" />
-                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"
+                        <a href="{{ $hospitalData->video_profile_url }}" class="glightbox play-btn mb-4"
                             data-vbtype="video" data-autoplay="true"></a>
                     </div>
 
                     <div class="col-lg-6 pt-3 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
                         <h3>
-                            Video profile Padang Eye Center
+                            {{ $videoSection['title'] }}
                         </h3>
-                        <p class="fst-italic">
-                            "Selamat datang di Padang Eye Center, tempat kami fokus pada kesehatan dan penglihatan mata
-                            Anda. Temukan perbedaannya di Padang Eye Center, di mana keahlian bertemu dengan kepedulian."
+                        <p class="fst-italic" id="video-description">
+                            {{ $videoSection['description'] }}
                         </p>
                         <ul>
                             <li>
@@ -707,87 +678,35 @@
         <section id="team" class="team section-bg">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2>Team</h2>
+                    <h2>{{ $teamSection['title'] }}</h2>
                     <p>
-                        Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-                        ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-                        quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-                        Quia fugiat sit in iste officiis commodi quidem hic quas.
+                        {{ $teamSection['description'] }}
                     </p>
                 </div>
-
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    @php $delay = 100 @endphp
+                    @foreach ($teamSection['data'] as $member)
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="{{ $delay }}">
+                            <div class="member">
+                                <div class="member-img">
+                                    <img src="assets/img/team/{{ $member }}" class="img-fluid" alt="" />
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Walter White</h4>
+                                    <span>Chief Executive Officer</span>
                                 </div>
                             </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                            </div>
                         </div>
-                    </div>
+                        @php $delay += 100  @endphp
+                    @endforeach
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="" />
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

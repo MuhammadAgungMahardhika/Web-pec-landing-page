@@ -1,39 +1,32 @@
 <nav id="navbar" class="navbar">
     <ul>
         <li>
-            <a class="nav-link scrollto active" href="#hero">Beranda</a>
+            <a class="nav-link scrollto active" href="#hero">{{ $navbarData[0] }}</a>
         </li>
-        <li><a class="nav-link scrollto" href="#about">Tentang PEC</a></li>
-        <li> <a class="nav-link scrollto" href="#services">Layanan Kami</a> </li>
-        <li> <a class="nav-link scrollto" href="#posts">Postingan</a></li>
-        <li> <a class="nav-link scrollto" href="#testimonials">Testimoni</a> </li>
-        <li> <a class="nav-link scrollto o" href="#branch">Cabang Pec</a> </li>
-        <li><a class="nav-link scrollto" href="#team">Team Pec</a></li>
-        {{-- <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> --}}
-        {{-- <li class="dropdown">
-            <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-                <li><a href="#">Drop Down 1</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>Deep Drop Down</span>
-                        <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                        <li><a href="#">Deep Drop Down 1</a></li>
-                        <li><a href="#">Deep Drop Down 2</a></li>
-                        <li><a href="#">Deep Drop Down 3</a></li>
-                        <li><a href="#">Deep Drop Down 4</a></li>
-                        <li><a href="#">Deep Drop Down 5</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-            </ul>
-        </li> --}}
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li><a class="nav-link scrollto" href="#about">{{ $navbarData[1] }}</a></li>
+        <li> <a class="nav-link scrollto" href="#services">{{ $navbarData[2] }}</a> </li>
+        <li> <a class="nav-link scrollto" href="#posts">{{ $navbarData[3] }}</a></li>
+        <li> <a class="nav-link scrollto" href="#testimonials">{{ $navbarData[4] }}</a> </li>
+        <li> <a class="nav-link scrollto o" href="#branch">{{ $navbarData[5] }}</a> </li>
+        <li><a class="nav-link scrollto" href="#team">{{ $navbarData[6] }}</a></li>
+        <li><a class="nav-link scrollto" href="#contact">{{ $navbarData[7] }}</a></li>
         <li>
-            <a class="getstarted scrollto" href="#about">Masuk</a>
+            <a class="getstarted scrollto" href="{{ url('login') }}">{{ $navbarData[8] }}</a>
+        </li>
+
+        <li class="dropdown">
+            <a href="#"><img src="{{ asset('assets/logo/' . $navbarData[9]) }}" alt=""
+                    width="30"></a>
+            <ul>
+                <li>
+                    <img src="{{ asset('assets/logo/flag_indonesia.png') }}" alt="">
+                </li>
+                <li>
+                    <img src="{{ asset('assets/logo/flag_indonesia.png') }}" alt="">
+                </li>
+            </ul>
         </li>
     </ul>
+
     <i class="bi bi-list mobile-nav-toggle"></i>
 </nav>
