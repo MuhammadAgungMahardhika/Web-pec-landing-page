@@ -73,12 +73,10 @@
 <body>
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
-            <a href="" class="logo "><img src="{{ asset('assets/logo/logo_pec.png') }}" alt=""
-                    class="img-fluid" /></a>
-            <h1 class="logo "><a href=""
-                    class="gilda-display-regular text-success">{{ $hospitalData->name }}</a></h1>
-
-
+            <a href="{{ url('/') }}" class="logo "><img src="{{ asset('assets/logo/logo_pec.png') }}"
+                    alt="" class="img-fluid" /></a>
+            <h1 class="logo "><a href="{{ url('/') }}" class="gilda-display-regular text-success">Padang Eye
+                    Center</a></h1>
             @include('template.navbar')
         </div>
     </header>

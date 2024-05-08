@@ -26,7 +26,8 @@ class DatabaseSeeder extends Seeder
             VisionSeeder::class,
             MissionSeeder::class,
             CategorySeeder::class,
-            NewsSeeder::class
+            NewsSeeder::class,
+            SocialAccountSeeder::class
         ]);
     }
 }

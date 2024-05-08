@@ -17,4 +17,9 @@ class Hospital extends Model
     {
         return $this->hasMany(mission::class, "id_hospital");
     }
+
+    public function social_accounts()
+    {
+        return $this->hasMany(Social_account::class, "id_hospital");
+    }
 }
