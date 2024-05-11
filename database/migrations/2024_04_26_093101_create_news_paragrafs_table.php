@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('news_paragrafs', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_news', false, true);
-            $table->date('year');
             $table->integer('number');
+            $table->string('source_description');
+            $table->string('source_link');
             $table->text('description');
             $table->string('created_by')->nullable();
             $table->string('updated_by')->nullable();

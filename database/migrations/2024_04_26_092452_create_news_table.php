@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('author');
             $table->date('publication_date');
             $table->string('summary');
-            $table->string('source')->nullable();
             $table->string('link')->nullable();
             $table->string('tags')->nullable();
             $table->string('created_by')->nullable();
@@ -30,6 +29,7 @@ return new class extends Migration
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

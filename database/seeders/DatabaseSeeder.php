@@ -27,7 +27,9 @@ class DatabaseSeeder extends Seeder
             MissionSeeder::class,
             CategorySeeder::class,
             NewsSeeder::class,
-            SocialAccountSeeder::class
+            NewsParagrafSeeder::class,
+            SocialAccountSeeder::class,
+            TeamSeeder::class
         ]);
     }
 }

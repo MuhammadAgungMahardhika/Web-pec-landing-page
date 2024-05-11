@@ -708,18 +708,22 @@
                                     data-aos="fade-up" data-aos-delay="{{ $delay }}">
                                     <div class="member " style="width: 20rem">
                                         <div class="member-img ">
-                                            <img src="{{ asset('assets/img/team/' . $member) }}" class="img-fluid"
-                                                alt="" />
+                                            <img src="{{ asset('assets/img/team/' . $member->image_url) }}"
+                                                class="img-fluid" alt="" />
                                             <div class="social">
-                                                <a href=""><i class="bi bi-twitter"></i></a>
-                                                <a href=""><i class="bi bi-facebook"></i></a>
-                                                <a href=""><i class="bi bi-instagram"></i></a>
-                                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                                <a href="https://twitter.com/{{ $member->twitter }}"><i
+                                                        class="bi bi-twitter"></i></a>
+                                                <a href="https://www.facebook.com/{{ $member->facebook }}"><i
+                                                        class="bi bi-facebook"></i></a>
+                                                <a href="https://www.instagram.com/{{ $member->instagram }}"><i
+                                                        class="bi bi-instagram"></i></a>
+                                                <a href="https://www.linkedin.com/in/{{ $member->linkedin }}"><i
+                                                        class="bi bi-linkedin"></i></a>
                                             </div>
                                         </div>
                                         <div class="member-info">
-                                            <h4>Walter White</h4>
-                                            <span>Chief Executive Officer</span>
+                                            <h4>{{ $member->name }}</h4>
+                                            <span>{{ $member->position }}</span>
                                         </div>
                                     </div>
                                 </div>

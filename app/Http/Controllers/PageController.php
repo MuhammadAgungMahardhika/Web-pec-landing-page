@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Hospital;
 use App\Models\Mission;
 use App\Models\news;
+use App\Models\News_paragraf;
+use App\Models\team;
 use App\Models\Vision;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
@@ -59,25 +61,17 @@ class PageController extends Controller
                 "description" => "Jika Anda memiliki keluhan tentang layanan kami, kami siap mendengarkan dan membantu Anda"
             ]
         ];
-        $visionData =  Vision::get();
-        $missionData = Mission::get();
+
         $videoSection = [
             "title" => "Video Profil Padang Eye Center",
             "description" =>  "Selamat datang di Padang Eye Center, tempat kami fokus pada kesehatan dan penglihatan mata
                 Anda. Temukan perbedaannya di Padang Eye Center, di mana keahlian bertemu dengan kepedulian."
 
         ];
-        $teamData = [];
-        for ($i = 0; $i < 19; $i++) {
-            $letter = chr(ord('A') + $i);
-            $teamData[] = $letter . ".jpg";
-        }
+        $teamData = Team::get();
         $teamSection = [
             "title" => "Tim Pec",
-            "description" => " Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-            ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-            quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-            Quia fugiat sit in iste officiis commodi quidem hic quas.",
+            "description" => "Padang Eye Center memiliki tim dokter subspesialis mata yang terdiri dari 20 ahli. Dari penanganan katarak hingga glaukoma, setiap dokter di tim kami memiliki keahlian khusus dalam bidangnya. Kami bertekad memberikan perawatan mata terbaik untuk menjaga kesehatan dan kejernihan visi Anda.",
             "data" => $teamData
         ];
 
@@ -103,7 +97,9 @@ class PageController extends Controller
     {
 
         $post =  News::where('id_category', 1)->where('slug', $slug)->first();
+
         $this->data["postData"] = $post;
+
         return view('pages.post', $this->data);
     }
 }
