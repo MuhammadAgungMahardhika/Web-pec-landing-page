@@ -1,7 +1,7 @@
 <section id="contact" class="contact">
     <div class="container" data-aos="fade-up">
         <div class="section-title">
-            <h2>Contact</h2>
+            <h2>Kontak</h2>
             <p>
                 Lokasi Padang Eye Center
             </p>
