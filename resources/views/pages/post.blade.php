@@ -24,15 +24,16 @@
 
                 {{-- Post Image --}}
                 <div class="row">
-                    <div class="col-12 text-center py-2">
+                    <div class="col-12 text-center py-4">
                         <img src="{{ asset('assets/img/posts/' . $postData->brosur_url) }}" alt="" width="100%"
-                            height="600">
+                            height="600" class="rounded">
                     </div>
                 </div>
 
                 {{-- Post Paragraf --}}
                 <div class="row">
-                    <div class="col-12 py-2">
+                    <div class="col-12 py-4">
+                        <span>Padang, {{ $postData->publication_date }},- </span>
                         @foreach ($postData->news_paragrafs as $paragraf)
                             <p>{{ $paragraf->description }}</p>
                         @endforeach

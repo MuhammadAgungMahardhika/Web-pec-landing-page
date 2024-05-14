@@ -26,7 +26,8 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="#about" class="btn-get-started scrollto bg-success">Booking now</a>
+                <a href="https://antrian.padangeyecenter.com/booking" class="btn-get-started scrollto bg-success">Booking
+                    now</a>
             </div>
 
             <div class="row icon-boxes p-4">
@@ -38,7 +39,7 @@
                         data-aos-delay="{{ $delay }}">
                         <div class="icon-box ">
                             <div class="icon"><i class="{{ $menu['icon'] }}"></i></div>
-                            <h4 class="title"><a href="">{{ $menu['title'] }}</a></h4>
+                            <h4 class="title"><a href="{{ $menu['link'] }}">{{ $menu['title'] }}</a></h4>
                             <p class="description">
                                 {{ $menu['description'] }}
                             </p>

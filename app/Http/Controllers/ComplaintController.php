@@ -47,8 +47,7 @@ class ComplaintController extends Controller
     public function store(Request $request)
     {
         try {
-
-            $validatedData = $request->validate([
+            $request->validate([
                 'id_hospital' => 'required|integer',
                 'name' => 'required|string|max:255',
                 'email' => 'required|email|max:255',
@@ -67,9 +66,9 @@ class ComplaintController extends Controller
             $store =  $this->model->save();
 
             if ($store) {
-                return response()->json(['message' => 'Complaint has been stored successfully', 'data' => $this->model], 201);
+                return response()->json(['message' => 'Terimakasih, komplain anda sudah kami simpan', 'data' => $this->model], 201);
             } else {
-                return response()->json(['message' => 'Failed to store complaint data'], Response::HTTP_UNPROCESSABLE_ENTITY);
+                return response()->json(['message' => 'Mohon maaf, komplain anda gagal disimpan'], Response::HTTP_UNPROCESSABLE_ENTITY);
             }
         } catch (\Throwable $th) {
             return response()->json(['message' => $th->getMessage()], Response::HTTP_UNPROCESSABLE_ENTITY);

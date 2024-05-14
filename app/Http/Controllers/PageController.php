@@ -41,22 +41,25 @@ class PageController extends Controller
         $landingPageMenu = [
             [
                 "icon" => "ri-stack-line",
+                "link" => "https://antrian.padangeyecenter.com/",
                 "title" => "Pendaftaran Online",
                 "description" => "Pendaftaran online untuk memudahkan anda mendapatkan nomor antrian lebih cepat"
             ],
             [
                 "icon" => "bx bx-calendar-heart",
+                "link" => "https://antrian.padangeyecenter.com/informasi/jadwal-dokter",
                 "title" => "Jadwal Dokter",
                 "description" => "Lihat jadwal dokter untuk menyesuaikan waktu kedatangan anda"
             ],
             [
                 "icon" => "bx bxl-whatsapp",
+                "link" => "http://wa.me/628116619987",
                 "title" => "Whats up",
-
                 "description" => "Jika ada yang ingin anda tanyakan silahkan hubungi kami melalui Whats Up sekarang juga"
             ],
             [
                 "icon" => "ri-fingerprint-line",
+                "link" => "http://wa.me/628116681200",
                 "title" => "Komplain Layanan",
                 "description" => "Jika Anda memiliki keluhan tentang layanan kami, kami siap mendengarkan dan membantu Anda"
             ]

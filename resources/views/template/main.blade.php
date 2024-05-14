@@ -14,6 +14,8 @@
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon" />
     {{-- Font Awesome --}}
     <script src="https://kit.fontawesome.com/9d17737383.js" crossorigin="anonymous"></script>
+    {{-- Sweet alert --}}
+    <script src="{{ asset('assets/vendor/sweetalert/sweetalert2@11.js') }}"></script>
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -55,6 +57,10 @@
 
         .shadow-pec-success:hover {
             box-shadow: 0px 0px 10px rgba(70, 223, 172, 0.5);
+        }
+
+        .bg-pec {
+            background: linear-gradient(to right, #46dfac, #66e0b1, #86e1b6, #a6e2bb, #c6e3c0, #e6e4c5, #ffe5aa, #ffce88, #ffb766, #ffa044, #ff8922);
         }
     </style>
     {{-- Jquery --}}

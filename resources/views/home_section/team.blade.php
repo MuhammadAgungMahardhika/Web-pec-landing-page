@@ -14,10 +14,10 @@
                         <div class="col-12 d-flex align-items-stretch justify-content-center swiper-slide "
                             data-aos="fade-up" data-aos-delay="{{ $delay }}">
                             <div class="member " style="width: 20rem">
-                                <div class="member-img ">
-                                    <img src="{{ asset('assets/img/team/' . $member->image_url) }}" class="img-fluid"
+                                <div class="member-img shadow-pec-success">
+                                    <img src="{{ asset('assets/img/team/' . $member->image_url) }}" class="img-fluid "
                                         alt="" />
-                                    <div class="social">
+                                    <div class="social ">
                                         <a href="https://twitter.com/{{ $member->twitter }}"><i
                                                 class="bi bi-twitter"></i></a>
                                         <a href="https://www.facebook.com/{{ $member->facebook }}"><i

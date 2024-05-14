@@ -31,11 +31,13 @@
                         </div>
                     </a>
 
-                    <div class="phone">
-                        <i class="bi bi-phone"></i>
-                        <h4>Call:</h4>
-                        <p>{{ $hospitalData->social_accounts[1]->url }}</p>
-                    </div>
+                    <a href="tel:{{ $hospitalData->social_accounts[1]->url }}">
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>Call:</h4>
+                            <p>{{ $hospitalData->social_accounts[1]->url }}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -87,6 +89,26 @@
             const clientPhoneNumber = $('#phoneNumber').val()
             const complaintSubject = $('#subject').val()
             const complaintMessage = $('#message').val()
+
+            if (!clientName) {
+                throw new Error("Mohon mengisi nama anda");
+
+            }
+
+            if (!clientEmail) {
+                throw new Error("Mohon mengisi alamat email anda");
+
+            }
+
+            if (!complaintSubject) {
+                throw new Error("Mohon mengisi judul komplain anda");
+            }
+
+            if (!complaintMessage) {
+                throw new Error("Mohon mengisi pesan komplain anda");
+
+            }
+
             let data = {
                 "id_hospital": idHospital,
                 "name": clientName,
@@ -113,11 +135,25 @@
             }
 
             const responseData = await response.json()
-            console.log(responseData)
+            const successMessage = responseData.message
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: successMessage,
+                showConfirmButton: false,
+                timer: 1500
+            });
 
         } catch (error) {
-            console.error(error);
-            alert("Request failed: " + error.message);
+            const errorMessage = error.message
+            Swal.fire({
+                position: "top-end",
+                icon: "warning",
+                title: errorMessage,
+                showConfirmButton: false,
+                timer: 1500
+            });
+
         }
 
     }

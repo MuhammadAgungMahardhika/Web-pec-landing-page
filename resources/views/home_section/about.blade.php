@@ -3,6 +3,8 @@
         <div class="section-title">
             <h2>Tentang Pec</h2>
             <img src="{{ asset('assets/logo/logo_pec.png') }}" alt="" width="200">
+            <img src="{{ asset('assets/img/accreditation/logo-kars.webp') }}" alt="akreditasi paripurna"
+                title="Logo KARS yang menunjukkan bahwa rumah sakit telah mencapai akreditasi paripurna, menandakan standar tinggi dalam pelayanan kesehatan">
             <p>
                 {{ $hospitalData->about }}
             </p>
