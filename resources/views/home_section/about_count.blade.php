@@ -5,7 +5,7 @@
                 <div class="count-box">
                     <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="2"
                         class="purecounter"></span>
-                    <p>Cabang</p>
+                    <p>Klinik Cabang</p>
                 </div>
             </div>
 

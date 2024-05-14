@@ -3,19 +3,17 @@
         <div class="section-title">
             <h2>Postingan</h2>
             <p>
-                Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-                ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-                quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-                Quia fugiat sit in iste officiis commodi quidem hic quas.
+                Berbagai update dan informasi terbaru dari Padang Eye Center, termasuk tips kesehatan mata dan layanan
+                unggulan kami.
             </p>
         </div>
 
         <div class="row">
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="mt-2 text-end">
+                <div class="px-4 text-end">
                     <a href="{{ url('posts') }}" class="text-success mt-4">Lihat semua postingan</a>
                 </div>
-                <div class="swiper-wrapper p-4">
+                <div class="swiper-wrapper ">
                     <?php $no = 5; ?>
                     @foreach ($postData as $post)
                         <div class="col-12 d-flex align-items-stretch justify-content-center swiper-slide p-4">
