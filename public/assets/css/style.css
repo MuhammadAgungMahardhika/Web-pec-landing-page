@@ -637,9 +637,9 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# home Section
 --------------------------------------------------------------*/
-#hero {
+#home {
     width: 100%;
     height: 100vh;
     position: relative;
@@ -648,7 +648,7 @@ h6 {
     position: relative;
 }
 
-#hero:before {
+#home:before {
     content: "";
     background: rgba(255, 255, 255, 0.8);
     position: absolute;
@@ -658,11 +658,11 @@ h6 {
     right: 0;
 }
 
-#hero .container {
+#home .container {
     padding-top: 80px;
 }
 
-#hero h1 {
+#home h1 {
     margin: 0;
     font-size: 56px;
     font-weight: 700;
@@ -671,13 +671,13 @@ h6 {
     font-family: "Poppins", sans-serif;
 }
 
-#hero h2 {
+#home h2 {
     color: #5e5e5e;
     margin: 10px 0 0 0;
     font-size: 22px;
 }
 
-#hero .btn-get-started {
+#home .btn-get-started {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -691,15 +691,15 @@ h6 {
     background: #46dfac;
 }
 
-#hero .btn-get-started:hover {
+#home .btn-get-started:hover {
     background: #3194db;
 }
 
-#hero .icon-boxes {
+#home .icon-boxes {
     margin-top: 100px;
 }
 
-#hero .icon-box {
+#home .icon-box {
     padding: 50px 30px;
     position: relative;
     overflow: hidden;
@@ -710,24 +710,24 @@ h6 {
     z-index: 1;
 }
 
-#hero .icon-box .title {
+#home .icon-box .title {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 18px;
 }
 
-#hero .icon-box .title a {
+#home .icon-box .title a {
     color: #124265;
     transition: 0.3s;
 }
 
-#hero .icon-box .description {
+#home .icon-box .description {
     font-size: 15px;
     line-height: 28px;
     margin-bottom: 0;
 }
 
-#hero .icon-box .icon {
+#home .icon-box .icon {
     margin-bottom: 20px;
     padding-top: 10px;
     display: inline-block;
@@ -737,37 +737,37 @@ h6 {
     color: #46dfac;
 }
 
-#hero .icon-box:hover {
+#home .icon-box:hover {
     transform: scale(1.08);
 }
 
-#hero .icon-box:hover .title a {
+#home .icon-box:hover .title a {
     color: #46dfac;
 }
 
 @media (min-width: 1024px) {
-    #hero {
+    #home {
         background-attachment: fixed;
     }
 }
 
 @media (max-height: 800px) {
-    #hero {
+    #home {
         height: auto;
     }
 }
 
 @media (max-width: 992px) {
-    #hero {
+    #home {
         height: auto;
     }
 
-    #hero h1 {
+    #home h1 {
         font-size: 28px;
         line-height: 36px;
     }
 
-    #hero h2 {
+    #home h2 {
         font-size: 18px;
         line-height: 24px;
     }

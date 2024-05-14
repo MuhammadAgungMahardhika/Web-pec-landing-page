@@ -36,7 +36,7 @@ class PageController extends Controller
         ];
     }
 
-    public function Main($lang = "id")
+    public function Home($lang = "id")
     {
         $landingPageMenu = [
             [
@@ -82,7 +82,7 @@ class PageController extends Controller
         $this->data["teamSection"] = $teamSection;
         $this->data["postData"] = $postData;
 
-        return view('pages.landing_page', $this->data);
+        return view('pages.home', $this->data);
     }
 
     public function Posts(Request $request)

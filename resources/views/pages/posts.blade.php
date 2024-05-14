@@ -1,7 +1,7 @@
 @extends('template.main')
 @section('container')
     <main id="main">
-        <section id="posts" class="posts ">
+        <section id="posts" class="posts">
             <div class="container shadow mt-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="section-title p-4">
                     <h2>Seluruh Postingan</h2>
@@ -36,7 +36,7 @@
             </div>
         </section>
         <!-- ======= Contact Section ======= -->
-        @include('section.contact')
+        @include('home_section.contact')
 
     </main>
 @endsection

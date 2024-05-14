@@ -3,18 +3,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 footer-contact">
-                    <h3>OnePage</h3>
+                    <h3> {{ $hospitalData->name }}</h3>
                     <p>
-                        A108 Adam Street <br />
-                        New York, NY 535022<br />
-                        United States <br /><br />
+                        {{ $hospitalData->address }} <br />
                         <strong>Phone:</strong> +1 5589 55488 55<br />
                         <strong>Email:</strong> info@example.com<br />
                     </p>
                 </div>
 
                 <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4>Informasi</h4>
                     <ul>
                         <li>
                             <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
@@ -37,26 +35,25 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Our Services</h4>
+                    <h4>Kontak Pec</h4>
                     <ul>
                         <li>
-                            <i class="bx bx-chevron-right"></i> <a href="#">Web Design</a>
+                            <i class="fa fa-phone text-sm me-2"> </i>
+                            <a href="#">{{ $hospitalData->social_accounts[1]->url }}</a>
                         </li>
                         <li>
-                            <i class="bx bx-chevron-right"></i>
-                            <a href="#">Web Development</a>
+                            <i class="fa fa-envelope me-2"></i>
+                            <a href="#">{{ $hospitalData->social_accounts[0]->url }}</a>
                         </li>
                         <li>
-                            <i class="bx bx-chevron-right"></i>
-                            <a href="#">Product Management</a>
+                            <i class="bx bxl-facebook me-2"></i>
+                            <a href="#">{{ $hospitalData->social_accounts[3]->url }}</a>
                         </li>
                         <li>
-                            <i class="bx bx-chevron-right"></i> <a href="#">Marketing</a>
+                            <i class="bx bxl-instagram me-2"></i>
+                            <a href="#">{{ $hospitalData->social_accounts[2]->url }}</a>
                         </li>
-                        <li>
-                            <i class="bx bx-chevron-right"></i>
-                            <a href="#">Graphic Design</a>
-                        </li>
+
                     </ul>
                 </div>
 

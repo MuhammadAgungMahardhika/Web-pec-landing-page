@@ -60,7 +60,7 @@
             </div>
         </section>
         <!-- ======= Contact Section ======= -->
-        @include('section.contact')
+        @include('home_section.contact')
 
     </main>
 @endsection

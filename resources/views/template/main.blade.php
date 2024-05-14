@@ -8,7 +8,7 @@
     <title>{{ $title }}</title>
     <meta content="padang eye center" name="description" />
     <meta content="padang eye center, mata" name="keywords" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Favicons -->
     <link href="{{ asset('assets/logo/logo_pec.png') }}" rel="icon" />
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon" />
@@ -57,6 +57,9 @@
             box-shadow: 0px 0px 10px rgba(70, 223, 172, 0.5);
         }
     </style>
+    {{-- Jquery --}}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
