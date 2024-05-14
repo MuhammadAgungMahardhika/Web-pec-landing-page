@@ -11,11 +11,11 @@ class Hospital extends Model
 
     public function visions()
     {
-        return $this->hasMany(vision::class, "id_hospital");
+        return $this->hasMany(Vision::class, "id_hospital");
     }
     public function missions()
     {
-        return $this->hasMany(mission::class, "id_hospital");
+        return $this->hasMany(Mission::class, "id_hospital");
     }
 
     public function social_accounts()

@@ -3,13 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hospital;
-use App\Models\Mission;
-use App\Models\news;
-use App\Models\News_paragraf;
-use App\Models\team;
-use App\Models\Vision;
+use App\Models\News;
+use App\Models\Team;
 use Illuminate\Http\Request;
-use Illuminate\Pagination\Paginator;
+
 
 class PageController extends Controller
 {
