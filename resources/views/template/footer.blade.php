@@ -6,8 +6,8 @@
                     <h3> {{ $hospitalData->name }}</h3>
                     <p>
                         {{ $hospitalData->address }} <br />
-                        <strong>Phone:</strong> +1 5589 55488 55<br />
-                        <strong>Email:</strong> info@example.com<br />
+                        <strong>Phone:</strong> {{ $hospitalData->social_accounts[1]->url }}<br />
+                        <strong>Email:</strong> {{ $hospitalData->social_accounts[0]->url }}<br />
                     </p>
                 </div>
 
@@ -48,6 +48,11 @@
                             <i class="bx bxl-instagram me-2 text-danger"></i>
                             <a
                                 href="https://www.instagram.com/{{ $hospitalData->social_accounts[2]->url }}">{{ $hospitalData->social_accounts[2]->url }}</a>
+                        </li>
+                        <li>
+                            <i class="bx bxl-youtube me-2 text-danger"></i>
+                            <a
+                                href="https://www.youtube.com/{{ $hospitalData->social_accounts[4]->url }}">{{ $hospitalData->social_accounts[4]->url }}</a>
                         </li>
                     </ul>
                 </div>

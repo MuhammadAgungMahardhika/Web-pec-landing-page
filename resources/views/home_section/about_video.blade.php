@@ -17,30 +17,29 @@
                 </p>
                 <ul>
                     <li>
-                        <i class="bx bx-check-double"></i> Ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.
+                        <i class="bx bx-check-double"></i> Menyediakan pelayanan mata sub spesialistik yang terpadu.
                     </li>
                     <li>
-                        <i class="bx bx-check-double"></i> Duis aute irure dolor in
-                        reprehenderit in voluptate velit.
+                        <i class="bx bx-check-double"></i> Menyediakan tenaga medis yang profesional dan kompeten.
                     </li>
                     <li>
-                        <i class="bx bx-check-double"></i> Voluptate repellendus
-                        pariatur reprehenderit corporis sint.
+                        <i class="bx bx-check-double"></i> Pelayanan yang berorientasi pada kepuasan pasien (Customer
+                        Satisfaction).
                     </li>
                     <li>
-                        <i class="bx bx-check-double"></i> Ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate trideta storacalaperda mastiro
-                        dolore eu fugiat nulla pariatur.
+                        <i class="bx bx-check-double"></i>Mendorong semangat kebersamaan untuk mencapai tujuan
+                        perusahaan.
+                    </li>
+                    <li>
+                        <i class="bx bx-check-double"></i>Menjalin hubungan kerjasama dengan institusi terkait baik
+                        nasional maupun internasional.
                     </li>
                 </ul>
                 <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt
-                    mollit anim id est laborum
+                    Kami percaya bahwa setiap pasien layak mendapatkan perawatan terbaik, itulah sebabnya kami terus
+                    meningkatkan standar layanan kami melalui inovasi dan pelatihan berkelanjutan. Di Padang Eye Center,
+                    kami tidak hanya menangani masalah kesehatan mata Anda, tetapi juga memberikan edukasi dan dukungan
+                    yang Anda butuhkan untuk menjaga kesehatan mata jangka panjang.
                 </p>
             </div>
         </div>
