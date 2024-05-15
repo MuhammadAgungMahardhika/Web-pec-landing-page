@@ -83,11 +83,10 @@
         </div>
         <div class="text-center text-md-right pt-3 pt-md-0">
 
-            <a href="https://www.facebook.com/{{ $hospitalData->social_accounts[3]->url }}" class="facebook"><span
-                    class="text-dark">Syarat dan Ketentuan</span></a>
+            <a href="{{ url('term-and-aggreement') }}"><span class="text-dark">Syarat dan
+                    Ketentuan</span></a>
             <span> | </span>
-            <a href="https://www.facebook.com/{{ $hospitalData->social_accounts[3]->url }}" class="facebook"><span
-                    class="text-dark">Kebijakan Privasi</span></a>
+            <a href="#"><span class="text-dark">Kebijakan Privasi</span></a>
 
         </div>
     </div>

@@ -102,4 +102,9 @@ class PageController extends Controller
 
         return view('pages.post', $this->data);
     }
+    public function TermAndAggreement()
+    {
+
+        return view('pages.term_and_aggreement', $this->data);
+    }
 }
