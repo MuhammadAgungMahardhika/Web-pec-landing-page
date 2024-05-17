@@ -17,7 +17,7 @@ class PageController extends Controller
     {
         $this->data = [
             "title" => "Padang Eye Center",
-            "hospitalData" =>  $hospital::first(),
+            "hospitalData" =>  $hospital::with(['visions', 'missions', 'social_accounts'])->first(),
             "navbarData" => [
                 0 => "Beranda",
                 1 => "Tentang PEC",
