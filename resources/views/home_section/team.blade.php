@@ -16,7 +16,7 @@
                             <div class="member " style="width: 20rem">
                                 <div class="member-img shadow-pec-success">
                                     <img src="{{ asset('assets/img/team/' . $member->image_url) }}" class="img-fluid "
-                                        alt="" />
+                                        alt="team pec" loading="lazy" />
                                     <div class="social ">
                                         <a href="https://twitter.com/{{ $member->twitter }}"><i
                                                 class="bi bi-twitter"></i></a>

@@ -21,7 +21,7 @@
                                 style="text-decoration: none; color: inherit;">
                                 <div class="card shadow-pec-success" style="width: 23rem">
                                     <img src="{{ asset('assets/img/posts/' . $post->brosur_url) }}" class="card-img-top"
-                                        alt="{{ $post->brosur_url }}">
+                                        alt="{{ $post->brosur_url }}" loading="lazy">
                                     <div class="card-body">
                                         <h5 class="card-title fw-medium">{{ $post->title }}</h5>
                                         <i class="fa fa-calendar"></i>

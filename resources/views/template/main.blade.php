@@ -9,6 +9,9 @@
     <meta content="padang eye center" name="description" />
     <meta content="padang eye center, mata" name="keywords" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- Preload image --}}
+    <link rel="preload" href="{{ asset('assets/img/pec.jpg') }}" as="image">
+    <link rel="preload" href="{{ asset('assets/logo/logo_pec.png') }}" as="image">
     <!-- Favicons -->
     <link href="{{ asset('assets/logo/logo_pec.png') }}" rel="icon" />
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon" />
@@ -83,7 +86,7 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="{{ url('/') }}" class="logo "><img src="{{ asset('assets/logo/logo_pec.png') }}"
-                    alt="" class="img-fluid" /></a>
+                    alt="logo pec" class="img-fluid" /></a>
             <h1 class="logo "><a href="{{ url('/') }}" class="gilda-display-regular text-success">Padang Eye
                     Center</a></h1>
             @include('template.navbar')
