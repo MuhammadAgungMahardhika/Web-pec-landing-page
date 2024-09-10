@@ -34,5 +34,10 @@ class SocialAccountSeeder extends Seeder
             "name" => "facebook",
             "url" => "padangeyecenter"
         ]);
+        DB::table('social_accounts')->insert([
+            "id_hospital" => 1,
+            "name" => "youtube",
+            "url" => "padangeyecenter"
+        ]);
     }
 }

@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="footer" class="bg-pec">
     <div class="footer-top">
         <div class="container">
             <div class="row">

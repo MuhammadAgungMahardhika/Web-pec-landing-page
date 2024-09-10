@@ -1997,39 +1997,11 @@ section {
 #footer {
     color: #444444;
     font-size: 14px;
-    background: linear-gradient(
-        to right,
-        #46dfac,
-        #66e0b1,
-        #86e1b6,
-        #a6e2bb,
-        #c6e3c0,
-        #e6e4c5,
-        #ffe5aa,
-        #ffd1a8,
-        #ffbc88,
-        #ffa666,
-        #ff9050
-    );
     box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
 }
 
 #footer .footer-top {
     padding: 60px 0 30px 0;
-    background: linear-gradient(
-        to right,
-        #46dfac,
-        #66e0b1,
-        #86e1b6,
-        #a6e2bb,
-        #c6e3c0,
-        #e6e4c5,
-        #ffe5aa,
-        #ffd1a8,
-        #ffbc88,
-        #ffa666,
-        #ff9050
-    );
 }
 
 #footer .footer-top .footer-contact {

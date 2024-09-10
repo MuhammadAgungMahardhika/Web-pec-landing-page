@@ -12,20 +12,18 @@
     {{-- Preload image --}}
     <link rel="preload" href="{{ asset('assets/img/pec.jpg') }}" as="image">
     <link rel="preload" href="{{ asset('assets/logo/logo_pec.png') }}" as="image">
+    {{-- Jquery --}}
+    <script src="{{ asset('assets/vendor/jquery/jquery-3.7.1.min.js') }}"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- Favicons -->
     <link href="{{ asset('assets/logo/logo_pec.png') }}" rel="icon" />
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon" />
     {{-- Font Awesome --}}
-    <script src="https://kit.fontawesome.com/9d17737383.js" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/vendor/font-awesome/fontawesome.js') }}"></script>
     {{-- Sweet alert --}}
     <script src="{{ asset('assets/vendor/sweetalert/sweetalert2@11.js') }}"></script>
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Oswald&display=swap" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/font-google-api/font-google-api.css') }}" rel="stylesheet" />
 
     <style>
         .gilda-display-regular {
@@ -66,9 +64,7 @@
             background: linear-gradient(to right, #46dfac, #66e0b1, #86e1b6, #a6e2bb, #c6e3c0, #e6e4c5, #ffe5aa, #ffce88, #ffb766, #ffa044, #ff8922);
         }
     </style>
-    {{-- Jquery --}}
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -99,7 +95,7 @@
 
     @include('template.footer')
 
-    <div id="preloader"></div>
+    {{-- <div id="preloader"></div> --}}
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
         <i class="bi bi-arrow-up-short"></i>
     </a>
